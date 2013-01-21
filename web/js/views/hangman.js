@@ -32,14 +32,14 @@ define(['jquery', 'underscore', 'backbone', 'text!templates/hangman.html'], func
 });
 
 
-wordlist_test = new Array("wordlist_games");
+wordlist_browser = new Array("Mosaic", "Netscape", "Internet Explorer", "Mozilla Firefox", "Opera", "Safari", "Google Chrome");
 wordlist_games = new Array(
 							"Battlefield 1942", "Battlefield Vietnam", "Battlefield 2", "Battlefield 2 Modern Combat", "Battlefield 2142", "Battlefield Bad Company", "Battlefield Heroes", 
 							"Battlefield 1943", "Battlefield Bad Company 2", "Battlefield Play4Free", "Battlefield 3", "Battlefield 4", "Crysis", "Crysis Warhead", "Crysis 2", "Crysis 3",
 							"Crysis Wars", "Crysis Maximum Edition"
 							);
 							
-wordlist_all = wordlist_test.concat(wordlist_games);
+wordlist_all = wordlist_browser.concat(wordlist_games);
 
 function GenerateWord(){
 	lang = wordlist_all.length;
