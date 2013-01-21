@@ -96,5 +96,33 @@ function GenerateWord_games(){
 	return false;
 };
 
+function GenerateWord_browser(){
+	lang = wordlist_browser.length;
+	index = Math.random();
+	index = index*(lang-1);
+	index = Math.round(index);
+	
+	WordToFind = wordlist_browser[index];
+	console.log(WordToFind);
+	
+	number = WordToFind.length;
+	maxindex = number-1;
+	EncodedWord="";
+	
+	
+	for(counter=0; counter <= maxindex; counter++){
+		Cry = "*";
+		Leer = " ";
+		if(counter == WordToFind.indexOf(' ',counter)){
+		EncodedWord = EncodedWord + Leer;
+		}else{
+		EncodedWord = EncodedWord + Cry;
+		};
+	};
+	
+	document.getElementById('EncodedWord').innerHTML = EncodedWord;
+	return false;
+};
+
 function FindLetter(){
 };
