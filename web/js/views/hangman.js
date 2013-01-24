@@ -125,4 +125,6 @@ function GenerateWord_browser(){
 };
 
 function FindLetter(){
+	var GuessedLetter = document.getElementById('guess').value;
+	console.log(GuessedLetter);
 };
