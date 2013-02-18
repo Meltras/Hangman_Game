@@ -137,15 +137,20 @@ function FindLetter(){
 	var EncodedWord = document.getElementById('EncodedWord').innerHTML;
 	var first = "";
 	var last = "";
+	var noth= " ";
+	var zeronoth = "";
 	var Wlength = EncodedWord.length;
 	var Cl = 0;
 	
+	if(GuessedLetter !=  noth && GuessedLetter != zeronoth){
 	Tries++;
 	TotalTries++;
+	};
 	
 	GuessedLetter = GuessedLetter.charAt(0);
 	document.getElementById('guess').value = "";
 	
+	if(GuessedLetter != noth && GuessedLetter != zeronoth){
 	for(var i = 0; i < Wlength; i++){
 		Cl++;
 		if(WordToFind.charAt(i) == GuessedLetter){
@@ -166,6 +171,7 @@ function FindLetter(){
 		};
 	};
 	document.getElementById('EncodedWord').innerHTML = EncodedWord;
+	};
 	
 	document.getElementById('try').innerHTML = Tries;
 	document.getElementById('fail').innerHTML = Failed;
